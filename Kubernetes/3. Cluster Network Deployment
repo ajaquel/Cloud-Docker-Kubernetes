@@ -1,0 +1,4 @@
+=== Cluster Network Deployemnt (On Master Node) ===
+# More options here https://kubernetes.io/docs/concepts/cluster-administration/addons/
+sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+sudo kubectl get pods --all-namespaces
