@@ -6,10 +6,10 @@ kubectl create serviceaccount dashboard -n default
 kubectl create clusterrolebinding dashboard-admin -n default --clusterrole=cluster-admin --serviceaccount=default:dashboard
 kubectl get secret $(kubectl get serviceaccount dashboard -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" | base64 --decode
 Token: 
-eyJhbGciOiJSUzI1NiIsImtpZCI6IlNpVUp1Qy1tUWt4RFFsZk9VMkxiTG04MWVaN3o3c0VhelZXMkdSM0NJVjgifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6ImRhc2hib2FyZC10b2tlbi03emc0eCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50Lm5hbWUiOiJkYXNoYm9hcmQiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiIyNzcxOTE3Ni00NGYwLTRmMTMtODcyOS1kMTM1ZWI4M2MzY2EiLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6ZGVmYXVsdDpkYXNoYm9hcmQifQ.LwvkBzkYu4CrLrneeoeNUvdNHt31KhyfAPC8DUbS0JVx3CKPV1MK6zyRooxLDQj-3I3yffJAYSG0k5Nw1dS53C7zCct5cvJ_743pD11Ao37J4jcsLRqm9uVkwvqJ3ar9_PtVL3sJfL5Jr3HARotTdDq7gBnjZRaH_pyGSIoU8Hqi9I_SDtz8bHr4gRVDKAf2-zlR7rEJRZqO_eOvZPLykSyoOf2ZI371x_LobzfU7Wg9J0rJR7coT8fT_XccxlxgpU2adP2gOzYY2aHZEa0kq-jpq2kakv7hWMKLVmUUpW-ltJSATSAMjjVyW-shqGQEI11uTCttyQycBMMdA1s6zg
+eyJhbGciOiJSUz.....CttyQycBMMdA1s6zg
 
-#kubeadm join 10.0.0.200:6443 --token iornzs.2rf6nsxf6nm64ezd --discovery-token-ca-cert-hash sha256:22f1f6297bea36bbd9ea60c360174d8168a7b253423fe93d846b804b4edf52b5
-kubeadm join 10.0.0.200:6443 --token 4tktfe.bb7y0t2b3ijrfiip --discovery-token-ca-cert-hash sha256:b1a78eec2393de19977e0d261bbd73ebb612fb785483b819023dc39c9f98bb13
+#kubeadm join 10.0.0.200:6443 --token iornzs.2rf6nsxf6nm64ezd --discovery-token-ca-cert-hash sha256:b1a7.....8bb13
+kubeadm join 10.0.0.200:6443 --token 4tktfe.bb7y0t2b3ijrfiip --discovery-token-ca-cert-hash sha256:b1a7.....8bb13
 
 sudo kubectl proxy --address=0.0.0.0
 http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/.
