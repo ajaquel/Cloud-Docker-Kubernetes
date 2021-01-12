@@ -17,3 +17,12 @@ https://stackoverflow.com/questions/37133114/how-do-i-update-a-kubernetes-autosc
 https://www.replex.io/blog/kubernetes-in-production-the-ultimate-guide-to-monitoring-resource-metrics
 https://dzone.com/articles/how-to-utilize-the-heapster-influxdb-grafana-stack
 
+Image Repos
+https://console.cloud.google.com/gcr/images/google-samples/GLOBAL
+https://hub.docker.com/search?q=&type=image
+
+Other 
+https://www.scalyr.com/blog/create-docker-image/
+https://linoxide.com/linux-how-to/ssh-docker-container/
+https://www.techrepublic.com/article/how-to-connect-docker-data-to-its-host-filesystem/
+https://ropenscilabs.github.io/r-docker-tutorial/04-Dockerhub.html
