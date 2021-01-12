@@ -1,0 +1,40 @@
+On "master-node" node after turn it on:
+
+sudo swapoff -a
+sudo kubectl proxy --address=0.0.0.0
+Access K8s Dashboard here: http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/node?namespace=default
+
+On "worker" nodes after turn it on:
+
+$ sudo swapoff -a
+
+
+alias cluster_util='kubectl get nodes --no-headers | awk '\''{print $1}'\'' | xargs -I {} sh -c '\''echo {} ; kubectl describe node {} | grep Allocated -A 5 | grep -ve Event -ve Allocated -ve percent -ve -- ; echo '\'''
+
+ubuntu@Master-Node:~$ cluster_util 
+master-node
+  Resource           Requests    Limits
+  cpu                850m (42%)  100m (5%)
+  memory             190Mi (4%)  390Mi (8%)
+
+worker01
+  Resource           Requests    Limits
+  cpu                100m (10%)  100m (10%)
+  memory             50Mi (1%)   50Mi (1%)
+
+worker02
+  Resource           Requests    Limits
+  cpu                100m (10%)  100m (10%)
+  memory             50Mi (1%)   50Mi (1%)
+
+worker03
+  Resource           Requests    Limits
+  cpu                100m (10%)  100m (10%)
+  memory             50Mi (1%)   50Mi (1%)
+
+
+
+alias cluster_cpualloc='cluster_util | grep % | awk '\''{print $1}'\'' | awk '\''{ sum += $1 } END { if (NR > 0) { print sum/(NR*20), "%\n" } }'\'''
+
+ubuntu@Master-Node:~$ cluster_cpualloc 
+0 %
