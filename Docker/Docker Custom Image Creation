@@ -1,0 +1,8 @@
+sudo docker create --name nginx_fs -p 80:80 nginx
+sudo docker start nginx_fs
+sudo docker cp index.html nginx_fs:/usr/share/nginx/html/index.html
+sudo docker commit nginx_fs
+sudo docker images
+sudo docker tag 7d95065827d7 ajaque/nginx_fs
+sudo docker login
+sudo docker push ajaque/nginx_fs
