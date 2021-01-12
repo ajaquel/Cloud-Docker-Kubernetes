@@ -1,0 +1,21 @@
+=== Cluster Joining (Every Worker Node) ===
+sudo hostnamectl set-hostname Worker01
+sudo kubeadm reset
+#sudo kubeadm join 10.0.0.187:6443 --token 0mzpuq.b9wexph2m23rhkkv --discovery-token-ca-cert-hash sha256:d72f31b708e318c19e4c8859b0ddfec089b5eddfe8c298400d5d7837da82d71c
+#sudo kubeadm join 10.0.0.200:6443 --token 1mz31e.sozujb6inxx15f1e --discovery-token-ca-cert-hash sha256:efcb9c4cd2e0bb1c9dc838f491e16bdbda7f33f0993f95417ec10b16d8e7dae6
+#sudo kubeadm join 10.0.0.200:6443 --token iornzs.2rf6nsxf6nm64ezd --discovery-token-ca-cert-hash sha256:22f1f6297bea36bbd9ea60c360174d8168a7b253423fe93d846b804b4edf52b5
+sudo kubeadm join 10.0.0.200:6443 --token 4tktfe.bb7y0t2b3ijrfiip --discovery-token-ca-cert-hash sha256:b1a78eec2393de19977e0d261bbd73ebb612fb785483b819023dc39c9f98bb13
+
+sudo hostnamectl set-hostname Worker02
+sudo kubeadm reset
+#sudo kubeadm join 10.0.0.187:6443 --token 0mzpuq.b9wexph2m23rhkkv --discovery-token-ca-cert-hash sha256:d72f31b708e318c19e4c8859b0ddfec089b5eddfe8c298400d5d7837da82d71c
+#sudo kubeadm join 10.0.0.200:6443 --token 1mz31e.sozujb6inxx15f1e --discovery-token-ca-cert-hash sha256:efcb9c4cd2e0bb1c9dc838f491e16bdbda7f33f0993f95417ec10b16d8e7dae6
+#sudo kubeadm join 10.0.0.200:6443 --token iornzs.2rf6nsxf6nm64ezd --discovery-token-ca-cert-hash sha256:22f1f6297bea36bbd9ea60c360174d8168a7b253423fe93d846b804b4edf52b5
+sudo kubeadm join 10.0.0.200:6443 --token 4tktfe.bb7y0t2b3ijrfiip --discovery-token-ca-cert-hash sha256:b1a78eec2393de19977e0d261bbd73ebb612fb785483b819023dc39c9f98bb13
+
+sudo hostnamectl set-hostname Worker03
+sudo kubeadm reset
+#sudo kubeadm join 10.0.0.187:6443 --token 0mzpuq.b9wexph2m23rhkkv --discovery-token-ca-cert-hash sha256:d72f31b708e318c19e4c8859b0ddfec089b5eddfe8c298400d5d7837da82d71c
+#sudo kubeadm join 10.0.0.200:6443 --token 1mz31e.sozujb6inxx15f1e --discovery-token-ca-cert-hash sha256:efcb9c4cd2e0bb1c9dc838f491e16bdbda7f33f0993f95417ec10b16d8e7dae6
+#sudo kubeadm join 10.0.0.200:6443 --token iornzs.2rf6nsxf6nm64ezd --discovery-token-ca-cert-hash sha256:22f1f6297bea36bbd9ea60c360174d8168a7b253423fe93d846b804b4edf52b5
+sudo kubeadm join 10.0.0.200:6443 --token 4tktfe.bb7y0t2b3ijrfiip --discovery-token-ca-cert-hash sha256:b1a78eec2393de19977e0d261bbd73ebb612fb785483b819023dc39c9f98bb13
