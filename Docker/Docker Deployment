@@ -1,0 +1,7 @@
+=== Docker Deployment (On Every Node) ===
+sudo apt-get update
+sudo apt-get install docker.io
+sudo docker version
+sudo systemctl enable docker
+sudo systemctl status docker
+sudo systemctl start docker
