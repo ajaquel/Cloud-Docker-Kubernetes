@@ -1,0 +1,19 @@
+Docker & K8s Installation in a cluster
+https://phoenixnap.com/kb/install-kubernetes-on-ubuntu
+https://acotten.com/post/1year-kubernetes
+
+K8s Dashboard Installation
+https://www.vikki.in/kubernetes-on-ubuntu-18-04-with-dashbaoard/
+https://www.replex.io/blog/how-to-install-access-and-add-heapster-metrics-to-the-kubernetes-dashboard
+
+K8s Autoscaling 
+https://kubernetes.io/blog/2016/07/autoscaling-in-kubernetes/
+https://www.replex.io/blog/kubernetes-in-production-the-ultimate-guide-to-monitoring-resource-metrics
+https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/
+
+Heapster Installation
+https://kubernetes.io/blog/2015/05/resource-usage-monitoring-kubernetes/
+https://stackoverflow.com/questions/37133114/how-do-i-update-a-kubernetes-autoscaler
+https://www.replex.io/blog/kubernetes-in-production-the-ultimate-guide-to-monitoring-resource-metrics
+https://dzone.com/articles/how-to-utilize-the-heapster-influxdb-grafana-stack
+
